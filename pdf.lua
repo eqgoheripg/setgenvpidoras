@@ -22,35 +22,35 @@ local scriptToLoad = GamesHub[currentGameId]
 
 if not scriptToLoad then
     player:Kick(
-        "\n[Xenon Hub]\nThis game is not supported!"
+        "\n[fail hub]\nThis game is not supported!"
         .. "\nPlace ID: "    .. tostring(currentPlaceId)
         .. "\nGame ID: "     .. tostring(currentGameId)
     )
     return
 end
 
-print("Xenon Loader: Game found! GameId: " .. tostring(currentGameId) .. " | PlaceId: " .. tostring(currentPlaceId))
+print("fail hub: Game found! GameId: " .. tostring(currentGameId) .. " | PlaceId: " .. tostring(currentPlaceId))
 
 local fetchSuccess, scriptText = pcall(function()
     return game:HttpGet(scriptToLoad)
 end)
 
 if not fetchSuccess or type(scriptText) ~= "string" or #scriptText == 0 then
-    player:Kick("\n[Xenon Hub]\nNetwork Error!\nCould not fetch the script.")
+    player:Kick("\n[fail hub]\nNetwork Error!\nCould not fetch the script.")
     return
 end
 
 local compiledScript, compileError = loadstring(scriptText)
 
 if not compiledScript then
-    player:Kick("\n[Xenon Hub]\nCompilation Error!\n" .. tostring(compileError))
+    player:Kick("\n[fail hub]\nCompilation Error!\n" .. tostring(compileError))
     return
 end
 
-print("Xenon Loader: Executing script...")
+print("fail hub: Executing script...")
 local execSuccess, execError = pcall(compiledScript)
 
 if not execSuccess then
-    player:Kick("\n[Xenon Hub]\nRuntime Error!\n" .. tostring(execError))
+    player:Kick("\n[fail hub]\nRuntime Error!\n" .. tostring(execError))
     return
 end
