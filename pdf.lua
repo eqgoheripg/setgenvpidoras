@@ -10,7 +10,7 @@ local player = Players.LocalPlayer or Players.PlayerAdded:Wait()
 
 local GamesHub = {
     [110175021189594] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Ability%20Arena.lua_e07b8d1a-cf89-430b-99b3-a77bb086e762.luau", -- Ability Arena
-    [114234929420007] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Bloxstrike.luau", -- Rivals
+    [114234929420007] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Bloxstrike.luau", -- Bloxstrike
     [3620011279] = "https://raw.githubusercontent.com/Xenon150/Raf2/refs/heads/main/Raf2.lua", -- Raf2
     [3647333358] = "https://raw.githubusercontent.com/Xenon150/evade12/refs/heads/main/evade.lua", -- Evade
 }
