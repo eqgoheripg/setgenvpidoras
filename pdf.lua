@@ -1,6 +1,3 @@
--- https://apis.roblox.com/universes/v1/places/286090429/universe
-
-
 if not game:IsLoaded() then
     game.Loaded:Wait()
 end
@@ -9,18 +6,18 @@ local Players = game:GetService("Players")
 local player = Players.LocalPlayer or Players.PlayerAdded:Wait()
 
 local GamesHub = {
-    [110175021189594] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Ability%20Arena.lua_e07b8d1a-cf89-430b-99b3-a77bb086e762.luau", -- Ability Arena 1
-    [106986181033085] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Ability%20Arena.lua_e07b8d1a-cf89-430b-99b3-a77bb086e762.luau", -- Ability Arena 2
-    [10230942274] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Ability%20Arena.lua_e07b8d1a-cf89-430b-99b3-a77bb086e762.luau", -- Ability Arena 3
-    [135434213652028] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Bloxstrike.luau", -- Bloxstrike 1
-    [114234929420007] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Bloxstrike.luau", -- Bloxstrike 2
-    [108194354348181] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Bloxstrike.luau", -- Bloxstrike 3
-    [101836176558619] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Bloxstrike.luau", -- Bloxstrike 4
-    [7633926880] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Bloxstrike.luau",     -- Bloxstrike 5
+    [110175021189594] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Ability%20Arena.lua_e07b8d1a-cf89-430b-99b3-a77bb086e762.luau",
+    [106986181033085] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Ability%20Arena.lua_e07b8d1a-cf89-430b-99b3-a77bb086e762.luau",
+    [10230942274] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Ability%20Arena.lua_e07b8d1a-cf89-430b-99b3-a77bb086e762.luau",
+    [135434213652028] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Bloxstrike.luau",
+    [114234929420007] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Bloxstrike.luau",
+    [108194354348181] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Bloxstrike.luau",
+    [101836176558619] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Bloxstrike.luau",
+    [7633926880] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Bloxstrike.luau",
 }
 
 local currentPlaceId = game.PlaceId
-local currentGameId  = game.GameId  -- Одинаков для всех сабплейсов!
+local currentGameId  = game.GameId
 
 local scriptToLoad = GamesHub[currentGameId]
 
@@ -52,9 +49,19 @@ if not compiledScript then
 end
 
 print("fail hub: Executing script...")
-local execSuccess, execError = pcall(compiledScript)
+
+-- Используем xpcall для перехвата детальной ошибки внутри скачанного скрипта
+local execSuccess, execError = xpcall(compiledScript, debug.traceback)
 
 if not execSuccess then
-    player:Kick("\n[fail hub]\nRuntime Error!\n" .. tostring(execError))
+    -- Выводим полный лог ошибки в консоль (F9) красным цветом
+    warn("\n[fail hub] CRITICAL ERROR INSIDE FETCHED SCRIPT:\n" .. tostring(execError))
+    
+    -- Кикаем игрока с понятным уведомлением
+    player:Kick(
+        "\n[fail hub]\nRuntime Error inside the script!"
+        .. "\nCheck developer console (F9) for details."
+        .. "\nError short: " .. tostring(execError):match("^.-:%d+: .-")
+    )
     return
 end
