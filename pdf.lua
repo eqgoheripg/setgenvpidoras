@@ -16,7 +16,7 @@ local GamesHub = {
     [114234929420007] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Bloxstrike.luau", -- Bloxstrike 2
     [108194354348181] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Bloxstrike.luau", -- Bloxstrike 3
     [101836176558619] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Bloxstrike.luau", -- Bloxstrike 4
-    [7633926880]  = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Bloxstrike.luau",     -- Bloxstrike 5
+    [7633926880] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Bloxstrike.luau",     -- Bloxstrike 5
 }
 
 local currentPlaceId = game.PlaceId
