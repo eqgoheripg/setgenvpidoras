@@ -20,6 +20,7 @@ local GamesHub = {
     [18687417158] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Forsaken.lua",     -- Forsaken
     [83645629621104] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Forsaken.lua",     -- Forsaken
     [86454545238517] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Forsaken.lua",     -- Forsaken
+    [6331902150] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Forsaken.lua",     -- Forsaken
 }
 
 local currentPlaceId = game.PlaceId
