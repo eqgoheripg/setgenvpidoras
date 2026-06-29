@@ -17,9 +17,6 @@ local GamesHub = {
     [108194354348181] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Bloxstrike.lua", -- Bloxstrike 3
     [101836176558619] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Bloxstrike.lua", -- Bloxstrike 4
     [7633926880] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Bloxstrike.lua",     -- Bloxstrike 5
-    [18687417158] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Forsaken.lua",     -- Forsaken
-    [83645629621104] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Forsaken.lua",     -- Forsaken
-    [86454545238517] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Forsaken.lua",     -- Forsaken
     [6331902150] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Forsaken.lua",     -- Forsaken
 }
 
