@@ -9,9 +9,9 @@ local Players = game:GetService("Players")
 local player = Players.LocalPlayer or Players.PlayerAdded:Wait()
 
 local GamesHub = {
-    [110175021189594] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Ability%20Arena.lua_e07b8d1a-cf89-430b-99b3-a77bb086e762.luau", -- Ability Arena 1
-    [106986181033085] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Ability%20Arena.lua_e07b8d1a-cf89-430b-99b3-a77bb086e762.luau", -- Ability Arena 2
-    [10230942274] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Ability%20Arena.lua_e07b8d1a-cf89-430b-99b3-a77bb086e762.luau", -- Ability Arena 3
+    [110175021189594] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Ability%20Arena.luau", -- Ability Arena 1
+    [106986181033085] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Ability%20Arena.luau", -- Ability Arena 2
+    [10230942274] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Ability%20Arena.luau", -- Ability Arena 3
     [135434213652028] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Bloxstrike.luau", -- Bloxstrike 1
     [114234929420007] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Bloxstrike.luau", -- Bloxstrike 2
     [108194354348181] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Bloxstrike.luau", -- Bloxstrike 3
