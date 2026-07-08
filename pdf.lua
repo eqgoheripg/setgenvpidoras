@@ -18,6 +18,7 @@ local GamesHub = {
     [101836176558619] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Bloxstrike.lua", -- Bloxstrike 4
     [7633926880] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Bloxstrike.lua",     -- Bloxstrike 5
     [6331902150] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Forsaken.lua",     -- Forsaken
+    [1742264997] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Scp%20roleplay.lua",     -- Scp Roleplay
 }
 
 local currentPlaceId = game.PlaceId
