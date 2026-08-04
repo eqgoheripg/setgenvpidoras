@@ -6,7 +6,7 @@ local Players = game:GetService("Players")
 local player = Players.LocalPlayer or Players.PlayerAdded:Wait()
 
 
-local UniversalScriptURL = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Universal.lua" -- 
+local UniversalScriptURL = "https://github.com/eqgoheripg/scripts/edit/main/death%20ball" -- death ball
 
 local GamesHub = {
     [6331902150] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Forsaken.lua",      -- Forsaken
