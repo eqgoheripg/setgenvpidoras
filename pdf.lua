@@ -11,8 +11,8 @@ local player = Players.LocalPlayer or Players.PlayerAdded:Wait()
 local GamesHub = {
     [6331902150] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Forsaken.lua",     -- Forsaken
     [1742264997] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Scp%20roleplay.lua",     -- Scp Roleplay
-    [1742264997] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Scp%20roleplay.lua",     -- 
-    [1742264997] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Scp%20roleplay.lua",     
+    [4580204640] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Survive%20The%20Killer",     -- survive the killer
+    [1742264997] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Scp%20roleplay.lua",    --  
 }
 
 local currentPlaceId = game.PlaceId
