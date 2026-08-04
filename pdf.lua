@@ -1,6 +1,3 @@
--- https://apis.roblox.com/universes/v1/places/286090429/universe
-
-
 if not game:IsLoaded() then
     game.Loaded:Wait()
 end
@@ -8,26 +5,19 @@ end
 local Players = game:GetService("Players")
 local player = Players.LocalPlayer or Players.PlayerAdded:Wait()
 
+
+local UniversalScriptURL = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Universal.lua" -- 
+
 local GamesHub = {
-    [6331902150] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Forsaken.lua",     -- Forsaken
-    [1742264997] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Scp%20roleplay.lua",     -- Scp Roleplay
-    [4580204640] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Survive%20The%20Killer",     -- survive the killer
-    [1742264997] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Scp%20roleplay.lua",    --  
+    [6331902150] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Forsaken.lua",      -- Forsaken
+    [1742264997] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Scp%20roleplay.lua",      -- Scp Roleplay
+    [4580204640] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Survive%20The%20Killer"       -- Survive The Killer
 }
 
 local currentPlaceId = game.PlaceId
-local currentGameId  = game.GameId  -- Одинаков для всех сабплейсов!
+local currentGameId  = game.GameId
 
-local scriptToLoad = GamesHub[currentGameId]
-
-if not scriptToLoad then
-    player:Kick(
-        "\n[fail hub]\nThis game is not supported!"
-        .. "\nPlace ID: "    .. tostring(currentPlaceId)
-        .. "\nGame ID: "     .. tostring(currentGameId)
-    )
-    return
-end
+local scriptToLoad = GamesHub[currentGameId] or UniversalScriptURL
 
 print("fail hub: Game found! GameId: " .. tostring(currentGameId) .. " | PlaceId: " .. tostring(currentPlaceId))
 
