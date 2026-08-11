@@ -9,7 +9,6 @@ local player = Players.LocalPlayer or Players.PlayerAdded:Wait()
 local UniversalScriptURL = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/death%20ball" -- death ball
 
 local GamesHub = {
-    [6331902150] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Forsaken.lua",      -- Forsaken
     [1742264997] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Scp%20roleplay.lua",      -- Scp Roleplay
     [4580204640] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Survive%20The%20Killer"       -- Survive The Killer
 }
