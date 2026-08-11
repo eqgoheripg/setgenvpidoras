@@ -25,14 +25,14 @@ local fetchSuccess, scriptText = pcall(function()
 end)
 
 if not fetchSuccess or type(scriptText) ~= "string" or #scriptText == 0 then
-    player:Kick("\n[fail hub]\nNetwork Error!\nCould not fetch the script.")
+    player:Kick("\n[bulo hub]\nNetwork Error!\nCould not fetch the script.")
     return
 end
 
 local compiledScript, compileError = loadstring(scriptText)
 
 if not compiledScript then
-    player:Kick("\n[fail hub]\nCompilation Error!\n" .. tostring(compileError))
+    player:Kick("\n[bulo hub]\nCompilation Error!\n" .. tostring(compileError))
     return
 end
 
@@ -40,6 +40,6 @@ print("fail hub: Executing script...")
 local execSuccess, execError = pcall(compiledScript)
 
 if not execSuccess then
-    player:Kick("\n[fail hub]\nRuntime Error!\n" .. tostring(execError))
+    player:Kick("\n[bulo hub]\nRuntime Error!\n" .. tostring(execError))
     return
 end
