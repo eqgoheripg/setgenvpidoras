@@ -33,9 +33,6 @@ if not fetchSuccess or type(scriptText) ~= "string" or #scriptText == 0 then
     return
 end
 
-print("bulo hub: got " .. #scriptText .. " bytes")
-print("bulo hub: head -> " .. string.sub(scriptText, 1, 150):gsub("\n", " "))
-
 local compiledScript, compileError = loadstring(scriptText)
 
 if not compiledScript then
