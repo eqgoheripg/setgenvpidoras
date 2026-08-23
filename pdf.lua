@@ -6,11 +6,11 @@ local Players = game:GetService("Players")
 local player = Players.LocalPlayer or Players.PlayerAdded:Wait()
 
 
-local UniversalScriptURL = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/death%20ball" -- death ball
+local UniversalScriptURL = " print"no support") "
 
 local GamesHub = {
-    [1742264997] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Scp%20roleplay.lua",      -- Scp Roleplay
-    [4580204640] = "https://raw.githubusercontent.com/eqgoheripg/scripts/refs/heads/main/Survive%20The%20Killer"       -- Survive The Killer
+    [1742264997] = "https://api.jnkie.com/api/v1/luascripts/public/8c99f152b4cc52196240e9c79b5a4c18c19674976ad30c5846911cce5d49e6f7/download",      -- Scp Roleplay
+    [4580204640] = ""       --
 }
 
 local currentPlaceId = game.PlaceId
@@ -18,7 +18,7 @@ local currentGameId  = game.GameId
 
 local scriptToLoad = GamesHub[currentGameId] or UniversalScriptURL
 
-print("fail hub: Game found! GameId: " .. tostring(currentGameId) .. " | PlaceId: " .. tostring(currentPlaceId))
+print("bulo hub: Game found! GameId: " .. tostring(currentGameId) .. " | PlaceId: " .. tostring(currentPlaceId))
 
 local fetchSuccess, scriptText = pcall(function()
     return game:HttpGet(scriptToLoad)
@@ -36,7 +36,7 @@ if not compiledScript then
     return
 end
 
-print("fail hub: Executing script...")
+print("bulo hub: Executing script...")
 local execSuccess, execError = pcall(compiledScript)
 
 if not execSuccess then
