@@ -6,7 +6,7 @@ local Players = game:GetService("Players")
 local player = Players.LocalPlayer or Players.PlayerAdded:Wait()
 
 
-local UniversalScriptURL = " print"no support") "
+local UniversalScriptURL = ""
 
 local GamesHub = {
     [1742264997] = "https://api.jnkie.com/api/v1/luascripts/public/8c99f152b4cc52196240e9c79b5a4c18c19674976ad30c5846911cce5d49e6f7/download",      -- Scp Roleplay
