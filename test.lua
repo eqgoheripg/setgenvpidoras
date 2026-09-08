@@ -88,4 +88,4 @@ local function safeExecute(payloadUrl, secretKey)
 end
 
 -- Запуск (Укажите зашифрованный URL и ваш секретный ключ)
-safeExecute("https://api.kodamo.net/loader/encrypted_payload", "YOUR_SECRET_KEY_2026")
+safeExecute("https://vss.pandauth.com/kv/28d03ee94222730a", "123")
