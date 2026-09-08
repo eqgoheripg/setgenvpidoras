@@ -104,4 +104,4 @@ end
 -- =========================================================
 --  ЗАПУСК
 -- =========================================================
-loadSecure("https://raw.githubusercontent.com/username/repository/main/script.lua")
+loadSecure("https://vss.pandauth.com/kv/28d03ee94222730a")
