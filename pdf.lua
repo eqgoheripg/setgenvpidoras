@@ -6,7 +6,7 @@ local Players = game:GetService("Players")
 local player = Players.LocalPlayer or Players.PlayerAdded:Wait()
 
 local GamesHub = {
-    [2820580801] = "https://api.jnkie.com/api/v1/luascripts/public/723aac2fcb8192264bef1dd55fc537c0faa2633e122f6960c9b2cb77d00c01e3/download", -- ohio
+    [2820580801] = "https://api.jnkie.com/api/v1/luascripts/public/122cf83ad2a031a69f90660fbc37282beb40f09ee693952990901afaa7abb4d3/download", -- ohio
 }
 
 local currentGameId  = game.GameId
