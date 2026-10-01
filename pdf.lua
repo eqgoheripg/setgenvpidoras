@@ -6,8 +6,8 @@ local Players = game:GetService("Players")
 local player = Players.LocalPlayer or Players.PlayerAdded:Wait()
 
 local GamesHub = {
-    [2820580801] = "https://api.jnkie.com/api/v1/luascripts/public/122cf83ad2a031a69f90660fbc37282beb40f09ee693952990901afaa7abb4d3/download", -- ohio
-    [2820580801] = "https://api.jnkie.com/api/v1/luascripts/public/93a11a2ccc076e4e376aed4ec1d2196808721af967625acdb82728ffe6607b32/download", -- D-DAY
+    [2820580801] = "https://api.jnkie.com/api/v1/luascripts/public/122cf83ad2a031a69f90660fbc37282beb40f09ee693952990901afaa7abb4d3/download", -- Ohio
+    [375716943]  = "https://api.jnkie.com/api/v1/luascripts/public/93a11a2ccc076e4e376aed4ec1d2196808721af967625acdb82728ffe6607b32/download", -- D-DAY
 }
 
 local currentGameId  = game.GameId
@@ -33,11 +33,17 @@ if not fetchSuccess or type(scriptText) ~= "string" or #scriptText == 0 then
     return
 end
 
+if scriptText:sub(1, 1) == "{" then
+    print("ixa: API error response: " .. scriptText)
+    player:Kick("\n[ixa]\nScript not found on server!\n" .. scriptText)
+    return
+end
+
 local compiledScript, compileError = loadstring(scriptText)
 
 if not compiledScript then
     print("ixa: compile error: " .. tostring(compileError))
-    player:Kick("\n[bulo hub]\nCompilation Error!\n" .. tostring(compileError))
+    player:Kick("\n[ixa]\nCompilation Error!\n" .. tostring(compileError))
     return
 end
 
