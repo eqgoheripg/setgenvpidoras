@@ -8,7 +8,7 @@ local player = Players.LocalPlayer or Players.PlayerAdded:Wait()
 local GamesHub = {
     [2820580801] = "https://api.jnkie.com/api/v1/luascripts/public/122cf83ad2a031a69f90660fbc37282beb40f09ee693952990901afaa7abb4d3/download", -- Ohio
     [375716943]  = "https://api.jnkie.com/api/v1/luascripts/public/93a11a2ccc076e4e376aed4ec1d2196808721af967625acdb82728ffe6607b32/download", -- D-DAY
-    [142823291]  = "https://api.jnkie.com/api/v1/luascripts/public/93a11a2ccc076e4e376aed4ec1d2196808721af967625acdb82728ffe6607b32/download", -- mm2
+    [66654135]  = "https://api.jnkie.com/api/v1/luascripts/public/93a11a2ccc076e4e376aed4ec1d2196808721af967625acdb82728ffe6607b32/download", -- mm2
 }
 
 local currentGameId  = game.GameId
